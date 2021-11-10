@@ -1,9 +1,12 @@
 import java.util.Date;
 
-public class PessoaFisica {
+public class PessoaFisica extends Pessoa {
 
-	public PessoaFisica(String nome, String endereco, String email, int telefone, Date nascimento, String CPF) {
-		// TODO Auto-generated constructor stub
+	public String cpf;
+
+	public PessoaFisica(String nome, String endereco, String email,String cpf, int telefone, Date nascimento) {
+		super(nome, endereco, email, telefone, nascimento);
 	}
 
+	public double salario;
 }

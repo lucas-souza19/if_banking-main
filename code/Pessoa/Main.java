@@ -7,7 +7,7 @@ public class Main {
 		System.out.println("Endereco: " + pessoaFisica.endereco);
 		System.out.println("Email: " + pessoaFisica.email);
 		System.out.println("Telefone: " + pessoaFisica.telefone);
-		System.out.println("CPF: " + pessoaFisica.CPF);
+		System.out.println("CPF: " + pessoaFisica.cpf);
 		System.out.println("Data de nascimento: " + pessoaFisica.data_nascimento.toString());
 	}
 }

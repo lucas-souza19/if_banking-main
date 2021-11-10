@@ -3,8 +3,8 @@ import java.lang.String;
 
 public class Gerente extends PessoaFisica {
 
-	public Gerente(String nome, String endereco, String email, int telefone, Date nascimento, String CPF) {
-		super(nome, endereco, email, telefone, nascimento, CPF);
+	public Gerente(String nome, String endereco, String email, String CPF,int telefone, Date nascimento) {
+		super(nome, endereco, email, CPF, telefone, nascimento);
 		// TODO Auto-generated constructor stub
 	}
 

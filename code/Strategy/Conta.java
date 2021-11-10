@@ -7,9 +7,11 @@ public class Conta {
 	protected int numeroConta;
 	protected double saldo;
 	protected double valorSaque;
+	protected double valorDeposito;
 	protected double valorChequeEspecial;
 	protected String tipoConta;
 	protected CalculaSaque estrategiaSaque;
+	protected CalculaDeposito estrategiaDeposito;
 
 	public Conta(String tipoConta, double saldo, double valorSaque, int i) {
 		this.tipoConta = tipoConta;
@@ -20,14 +22,17 @@ public class Conta {
 		switch (tipoConta) {
 		case "Corrente":
 			estrategiaSaque = new CalculaSaqueCorrente();
+			estrategiaDeposito = new CalculaDepositoCorrente();
 			tipoConta = "Corrente";
 			break;
 		case "Salario":
 			estrategiaSaque = new CalculaSaqueSalario();
+			estrategiaDeposito = new CalculaDepositoSalario();
 			tipoConta = "Salario";
 			break;
 		case "Poupanca":
 			estrategiaSaque = new CalculaSaquePoupanca();
+			estrategiaDeposito = new CalculaDepositoPoupanca();
 			tipoConta = "Poupanca";
 			break;
 		default:
@@ -61,4 +66,13 @@ public class Conta {
 	public double getValorChequeEspecial() {
 		return valorChequeEspecial;
 	}
+	
+	public double calcularDeposito() {
+		return estrategiaDeposito.calculaDeposito(this);
+	}
+
+	public double getValorDeposito() {
+		return valorDeposito;
+	}
+
 }

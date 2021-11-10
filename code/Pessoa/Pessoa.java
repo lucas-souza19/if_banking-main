@@ -10,7 +10,7 @@ public class Pessoa {
 
 	public Date nascimento;
 	public Object data_nascimento;
-	public String CPF;
+	public String cpf;
 
 	public Pessoa(String nome, String endereco, String email, int telefone, Date nascimento) {
 		this.nome = nome;
